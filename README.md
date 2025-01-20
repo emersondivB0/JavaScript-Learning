@@ -1,28 +1,31 @@
-# Curso de Javascript
+# JavaScript Course
 
-Curso para aprender Javascript desde cero, sólo haré anotaciones del lenguaje y su aplicación.
+Course to learn JavaScript from zero, I only taking notes about the language and applications.
 
-## Referencia
+## References
 
 [W3School](https://www.w3schools.com/js/default.asp)
 
 [Mouredev Community](https://www.mouredev-link/javascript)
 
-[Guía de Estilo](https://github.com/paolocarrasco/javascript-style-guide)
+[Guía de Estilo (Spanish)](https://github.com/paolocarrasco/javascript-style-guide)
 
-## Recursos
+## Resources
 
-Se necesita un navegador web, un entorno de ejecución de JS, puede ser un playground online, se necesita tener Node.js instalado y se necesita un editor de código.
+- Web browser.
+- Node.js installed.
+- A code editor like Neovim, VSCode, Zed, etc.
+- An online playground in case you haven't an editor.
 
 ## Basics
 
-Para empezar, la forma más simple de mostrar información en la consola es con el comando `console`:
+To start, the simplest form to show information in the console is with the `console` command:
 
 ```javascript
 console.log("Hello World!");
 ```
 
-Los strings (texto) pueden (y deben) escribirse entre dobles comillas, comillas simples o comillas hacia atrás, siempre y cuando sean dobles:
+String (text) can (and should) be written between double quotes, single quotes and backwards quotes, always the same to open and close:
 
 ```javascript
 console.log("Mensaje 1");
@@ -30,12 +33,12 @@ console.log("Mensaje 2");
 console.log(`Mensaje 3`);
 ```
 
-Se pueden realizar operaciones aritméticas simples desde `console.log`.
+You can compute basic arithmetic operations from `console.log`.
 
 ### Variables
 
-El nombre de la variable debe ser descriptivo, se debe usar el 'lower camel case'.
+The names of variables must be descriptive. The way to name it should be 'lower camel case'.
 
-Hay tres formas de declarar variables, con `var`, `let` y `const`.
+There are 3 ways of declare variables, with `var`, `let` and `const`.
 
-`var` es la primera forma de crear variables que se usaron en el lenguaje, indica que la variable es literalmente variable,
+`var` is the first form to declare variables to be used with the language, it means literally a variable.
