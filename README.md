@@ -69,3 +69,127 @@ You can check the type of any data with the function `typeof`.
 | Null      | Value null, absense of value            |
 | Symbol    | To create an unique value in variable   |
 | BigInt    | A large integer                         |
+
+#### Strings
+
+Strings can be concatenated with the `+` operator.
+
+You can create a multi line text with backwards quotes.
+
+To interpolate a variable, must be between backwards quotes and call it like this:
+
+```javascript
+let myVariable = "String";
+console.log(`This is a new ${myVariable}!`);
+```
+
+##### Strings methods
+
+| Method                 | Description                                       |
+| ---------------------- | ------------------------------------------------- |
+| length                 | Get the length of a string                        |
+| indexOf("string/char") | Get the index where the string or the char starts |
+| toUpperCase()          | Convert all the string to upper case              |
+| toLowerCase()          | Convert all the string to lower case              |
+| includes(string/char)  | Check if the string/char is in the main string    |
+| slice(a, b)            | Truncate the string between index a and b         |
+| replace(A, B)          | Replace the string A with the string B            |
+
+### Operators
+
+#### Arithmetic Operators
+
+| Operator | Definition   |
+| -------- | ------------ |
+| `+`      | Addition     |
+| `-`      | Substraction |
+| `*`      | Multiply     |
+| `/`      | Divide       |
+| `%`      | Module       |
+| `**`     | Power        |
+| `++`     | Increment    |
+| `--`     | Decrement    |
+
+#### Assignment Operators
+
+| Operator | Example   | Same As      |
+| -------- | --------- | ------------ |
+| =        | x = y     | x = y        |
+| +=       | x += y    | x = x + y    |
+| -=       | x -= y    | x = x - y    |
+| \*=      | x \*= y   | x = x \* y   |
+| /=       | x /= y    | x = x / y    |
+| %=       | x %= y    | x = x % y    |
+| \*\*=    | x \*\*= y | x = x \*\* y |
+
+#### Comparisons Operators
+
+Given that x = 5, the table below explains the comparison operators:
+
+| Operator | Description                       | Comparing   | Returns |
+| -------- | --------------------------------- | ----------- | ------- |
+| =\=      | equal to                          | x =\= 8     | false   |
+|          |                                   | x = 5       | true    |
+|          |                                   | x = "5"     | true    |
+| `=\=\=`  | equal value and equal type        | x =\=\= 5   | true    |
+|          |                                   | x =\=\= "5" | false   |
+| !=       | not equal                         | x != 8      | true    |
+| !=\=     | not equal value or not equal type | x !=\= 5    | false   |
+|          |                                   | x !=\= "5"  | true    |
+|          |                                   | x !=\= 8    | true    |
+| >        | greater than                      | x > 8       | false   |
+| <        | less than                         | x < 8       | true    |
+| >=       | greater than or equal to          | x >= 8      | false   |
+| <=       | less than or equal to             | x <= 8      | true    |
+
+##### Truth values
+
+All the positive and negative number except the zero are `true`.
+All the non empty strings are `true`.
+Boolean `true`.
+
+##### False values
+
+Zero, zero BigInt, null, undefined, NaN, the boolean `false` and
+every empty strings are `false`.
+
+#### Logical Operators
+
+| Operator | Description |
+| -------- | ----------- |
+| &&       | logical and |
+| \|\|     | logical or  |
+| !        | logical not |
+
+### Conditionals
+
+#### If Else
+
+```javascript
+if (condition1) {
+  // Code
+} else if (condition2) {
+  // Code
+} else {
+  // Code
+}
+```
+
+#### Ternary
+
+```javascript
+let variable = condition ? caseA : caseB;
+```
+
+#### Switch
+
+```javascript
+switch (variable) {
+  case value1:
+  // Code
+  case value2:
+  // Code
+  case valuen:
+  // Code
+}
+```
