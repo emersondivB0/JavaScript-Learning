@@ -193,3 +193,61 @@ switch (variable) {
   // Code
 }
 ```
+
+### Data Structures
+
+#### Arrays
+
+There's two ways to create arrays. Declaring the array empty or with elements between square brackets. Declaring an object Array with the size or the elements:
+
+```javascript
+let array1 = [];
+let array2 = ["a", 1, true];
+let array3 = new Array();
+let array4 = new Array(3);
+let array5 = new Array("a", 1, true);
+```
+
+##### Methods
+
+| Method                | Description                                         |
+| --------------------- | --------------------------------------------------- |
+| push(element)         | Insert an element in the last position of the array |
+| pop()                 | Delete the last element in the array                |
+| unshift(elements)     | Add elements to the start of the array              |
+| shift()               | Delete the first element of the array               |
+| length                | Length of the array                                 |
+| slice(a, b)           | Truncate the array to the index a and b (excluded)  |
+| splice(a, b, element) | Reemplace items between a and b with the element    |
+
+#### Sets
+
+A set cannot have duplicated items.
+
+Set doesn't index with numbers, it index with hash.
+
+To initialize an empty set, first of all, always use `new` statement.
+
+```javascript
+let newSet = new Set();
+```
+
+To initialize with values, they must be between brackets:
+
+```javascript
+let newSet = new Set(["item1", "item2", "item3"]);
+```
+
+##### Methods
+
+| Method          | Description                                     |
+| --------------- | ----------------------------------------------- |
+| add(item)       | Add an item to the end of the Set               |
+| delete(item)    | Delete the item, must be the same value         |
+| has(item)       | Search an item in the Set and returns a boolean |
+| size            | Get the size of the Set                         |
+| Array.from(Set) | Convert a set in an array                       |
+
+#### Maps
+
+Each element is componed by a key and a value
