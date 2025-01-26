@@ -3,6 +3,41 @@
 Course to learn JavaScript from zero, I only taking notes about the
 language and applications.
 
+## Table of Contents
+
+- [JavaScript Course](#javascript-course)
+  - [References](#references)
+  - [Resources](#resources)
+  - [Basics](#basics)
+    - [Variables](#variables)
+    - [Data Types](#data-types)
+      - [Primitives](#primitives)
+      - [Strings](#strings)
+        - [Strings methods](#strings-methods)
+    - [Operators](#operators)
+      - [Arithmetic Operators](#arithmetic-operators)
+      - [Assignment Operators](#assignment-operators)
+      - [Comparisons Operators](#comparisons-operators)
+        - [Truth values](#truth-values)
+        - [False values](#false-values)
+      - [Logical Operators](#logical-operators)
+    - [Conditionals](#conditionals)
+      - [If Else](#if-else)
+      - [Ternary](#ternary)
+      - [Switch](#switch)
+    - [Data Structures](#data-structures)
+      - [Arrays](#arrays)
+        - [Arrays Methods](#arrays-methods)
+      - [Sets](#sets)
+        - [Sets Methods](#sets-methods)
+      - [Maps](#maps)
+        - [Maps Methods](#maps-methods)
+    - [Loops](#loops)
+      - [For Loop](#for-loop)
+      - [While Loop](#while-loop)
+      - [Do While Loop](#do-while-loop)
+      - [For Of Loop](#for-of-loop)
+
 ## References
 
 [W3School](https://www.w3schools.com/js/default.asp)
@@ -131,7 +166,7 @@ Given that x = 5, the table below explains the comparison operators:
 | =\=      | equal to                          | x =\= 8     | false   |
 |          |                                   | x = 5       | true    |
 |          |                                   | x = "5"     | true    |
-| `=\=\=`  | equal value and equal type        | x =\=\= 5   | true    |
+| =\=\=    | equal value and equal type        | x =\=\= 5   | true    |
 |          |                                   | x =\=\= "5" | false   |
 | !=       | not equal                         | x != 8      | true    |
 | !=\=     | not equal value or not equal type | x !=\= 5    | false   |
@@ -208,7 +243,7 @@ let array4 = new Array(3);
 let array5 = new Array("a", 1, true);
 ```
 
-##### Methods
+##### Arrays Methods
 
 | Method                | Description                                         |
 | --------------------- | --------------------------------------------------- |
@@ -238,7 +273,7 @@ To initialize with values, they must be between brackets:
 let newSet = new Set(["item1", "item2", "item3"]);
 ```
 
-##### Methods
+##### Sets Methods
 
 | Method          | Description                                     |
 | --------------- | ----------------------------------------------- |
@@ -250,4 +285,64 @@ let newSet = new Set(["item1", "item2", "item3"]);
 
 #### Maps
 
-Each element is componed by a key and a value
+Each element is componed by a key and a value.
+
+It Initialize by two ways, empty or valued.
+
+```javascript
+let myMap = new Map();
+let myMap2 = new Map([
+  [ke1 : value1],
+  [key2 : value2],
+  [key3 : value3],
+])
+```
+
+##### Maps Methods
+
+| Method            | Description                                        |
+| ----------------- | -------------------------------------------------- |
+| .set(key : value) | Add a new pair key/value or modify and exist       |
+| .get(key)         | Get the value of the given key                     |
+| .has(key)         | Check for the key and return a boolean if it exist |
+| .delete(key)      | Delete the pair of the given key                   |
+| .keys()           | Return the list of keys                            |
+| .values()         | Retunr the list of values                          |
+| .size             | Return the size of the map (int)                   |
+
+### Loops
+
+#### For Loop
+
+```javascript
+for (let index = 0; condition; index++) {
+  //Code
+}
+```
+
+#### While Loop
+
+```javascript
+while (condition) {
+  // Code
+}
+```
+
+#### Do While Loop
+
+```javascript
+do {
+  // Code
+} while (condition);
+```
+
+#### For Of Loop
+
+This is to iterate on arrays, sets, maps, strings.
+
+```javascript
+let myArray = new Array(n);
+for (let item of myArray) {
+  // Code
+}
+```
