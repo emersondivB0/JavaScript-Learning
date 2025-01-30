@@ -1,0 +1,3 @@
+/*
+ * Practice console methods.
+ */

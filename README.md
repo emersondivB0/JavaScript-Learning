@@ -6,6 +6,7 @@ language and applications.
 ## Table of Contents
 
 - [JavaScript Course](#javascript-course)
+  - [Table of Contents](#table-of-contents)
   - [References](#references)
   - [Resources](#resources)
   - [Basics](#basics)
@@ -37,6 +38,16 @@ language and applications.
       - [While Loop](#while-loop)
       - [Do While Loop](#do-while-loop)
       - [For Of Loop](#for-of-loop)
+    - [Functions](#functions)
+      - [Anonymous Fuctions](#anonymous-fuctions)
+      - [Arrow Functions](#arrow-functions)
+      - [Higher-Order Functions](#higher-order-functions)
+    - [Objects](#objects)
+      - [Propagation (...)](<#propagation-(...)>)
+    - [Classes](#classes)
+      - [Inheritance](#inheritance)
+      - [Static Methods](#static-methods)
+    - [Console](#console)
 
 ## References
 
@@ -346,3 +357,208 @@ for (let item of myArray) {
   // Code
 }
 ```
+
+### Functions
+
+Is a code block that can be called to execute an specific task.
+
+```javascript
+function myFunction() {
+  // Code
+}
+
+myFunction();
+```
+
+A function could have parameters.
+
+```javascript
+function myFunction(a,b,c,d,...) {
+  console.log(a + b + c + d + ...)
+}
+```
+
+#### Anonymous Fuctions
+
+Anonymous functions are functions without name, can be invoked directly, but must be assigned to a variable.
+
+```javascript
+const myFunction2 = function (param) {
+  console.log(`Hello ${param}`);
+};
+myFunction2("param");
+```
+
+#### Arrow Functions
+
+Arrow functions are mostly like Anonymous functions, must be assigned to a constant in order to use it, can have parameters or not.
+
+```javascript
+const myFunc3 = (param) => {
+  // Code
+};
+// If the code is just one line:
+const myFunc4 = (
+  param, // Code line ;
+) => myFunc3(param);
+myFunc4(param);
+```
+
+#### Higher-Order Functions
+
+These are functions that receive another functions as arguments.
+
+```javascript
+//Pass function as an argument to another function
+
+//array of names to be used in the function
+const names = ["John", "Tina", "Kale", "Max"];
+
+//Function using function fn as a parameter
+function useFunction(arr, fn) {
+  for (let i = 0; i < arr.length; i++) {
+    fn(arr[i]);
+  }
+}
+
+//Function that is being used as a parameter
+function argFn(name) {
+  console.log("Hello " + name);
+}
+
+//calling useFunction() with argFn() as a parameter
+useFunction(names, argFn);
+
+/*Result printed:
+   Hello John
+   Hello Tina
+   Hello Kale
+   Hello Max
+*/
+```
+
+### Objects
+
+Everything out of the primitive data type is an object.
+
+An object, like the map, could be initialize with pairs of values, can be accesed through the dot notation, also with brackets notation. The values can be changed (reassigned). To compare, should ve each value. Objects can be nested. Can be assigned with a function as a value. Can be iterated with for-in. To access iterated key should be with brackets. Inside a function (internal) you can referentiate any propertie with the word `this.`.
+
+```javascript
+let myObject = {
+  item1: "item1",
+  item2: "item2",
+  item3: 1,
+  item4: true,
+  myFunc: function () {
+    console.log(`Function of ${this.item1}`);
+  },
+  myObject2: {
+    item5: "item5",
+    number: 2,
+  },
+};
+```
+
+#### Propagation (...)
+
+```javascript
+// With arrays
+let myArray2 = [...myArray];
+let myArray3 = [...myArray, a, b];
+let myArray4 = [...myArray2, ...myArray3];
+
+// With Objects
+let myObject2 = [...myObject1, key: value];
+```
+
+### Classes
+
+A class is a blueprint of an object. Is the best way to create an object, by default.
+
+To instantiate a class must declare a constructor to set and get the properties.
+Properties can be declared with a default value, also properties can be private to get access only inside the class.
+
+```javascript
+class MyClass {
+  // To declare a private property must use #
+  #prop3;
+  constructor(prop1 = "default", prop2, prop3) {
+    this.prop1 = prop1;
+    this.prop2 = prop2;
+    this.#prop3 = prop3;
+  }
+
+  // To use the private prop in a method should use # too
+  method() {
+    this.#prop3;
+  }
+}
+
+// Instantiate
+
+let myObjet = new MyClass("prop1", "prop2", "prop3");
+// access one public property
+console.log(myObject.prop1);
+// Access to a method
+myObject.method();
+```
+
+#### Inheritance
+
+The main purpose of inheritance is to inherit the behavior of a class.
+
+```javascript
+class MyClass1 {
+  constructor(prop1, prop2) {
+    this.prop1 = prop1;
+    this.prop2 = prop2;
+  }
+
+  method1() {
+    console.log("method 1");
+  }
+}
+
+class MyClass2 extends MyClass1 {
+  constructor(prop1, prop3) {
+    super(prop1);
+    this.prop3 = prop3;
+  }
+}
+
+let newObject = new MyClass2(prop1, prop3);
+newObject.method1();
+```
+
+#### Static Methods
+
+This kind of methods can be called without instantiate the class.
+
+```javascript
+class MyClassStatic {
+  static staticMethod(prop1, prop2) {
+    console.log("This method can be called directly through the class");
+  }
+}
+
+MyClassStatic.staticMethod(prop1, prop2);
+```
+
+### Console
+
+| Method                         | Description                                         |
+| ------------------------------ | --------------------------------------------------- |
+| .log()                         | Show messages in console.                           |
+| .error()                       | Show errors in console.                             |
+| .warn                          | Show a warning in console.                          |
+| .info()                        | Show a simple message in console.                   |
+| .table(data)                   | Show the data given in table format.                |
+| .group(head)                   | Open a group of data showed.                        |
+| .groupEnd()                    | Close the group.                                    |
+| .time("Message")               | Open an execution time medition.                    |
+| .timeEnd("Message")            | Closes the execution time medition block            |
+| .assert(condition, "Message"); | Shows exception with message if condition is false. |
+| .count("label")                | Number of times it has been called with that label  |
+| .countReset()                  | Reset the counter.                                  |
+| .trace()                       | Make a trae of the code executed.                   |
+| .clear()                       | Clean the console.                                  |
